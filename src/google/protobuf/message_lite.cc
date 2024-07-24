@@ -12,6 +12,8 @@
 
 #include "google/protobuf/message_lite.h"
 
+#include <sys/types.h>
+
 #include <climits>
 #include <cstddef>
 #include <cstdint>
