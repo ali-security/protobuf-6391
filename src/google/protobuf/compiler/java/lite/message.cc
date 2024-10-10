@@ -332,7 +332,7 @@ void ImmutableMessageLiteGenerator::Generate(io::Printer* printer) {
       "\"fallthrough\"})\n"
       "protected final java.lang.Object dynamicMethod(\n"
       "    com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,\n"
-      "    java.lang.Object arg0, java.lang.Object arg1) {\n"
+      "    java.lang.Object arg0) {\n"
       "  switch (method) {\n"
       "    case NEW_MUTABLE_INSTANCE: {\n"
       "      return new $classname$();\n"
