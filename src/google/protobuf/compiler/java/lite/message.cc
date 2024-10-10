@@ -328,11 +328,10 @@ void ImmutableMessageLiteGenerator::Generate(io::Printer* printer) {
 
   printer->Print(
       "@java.lang.Override\n"
-      "@java.lang.SuppressWarnings({\"ThrowNull\", \"unchecked\", "
-      "\"fallthrough\"})\n"
+      "@java.lang.SuppressWarnings({\"ThrowNull\", \"unchecked\"})\n"
       "protected final java.lang.Object dynamicMethod(\n"
       "    com.google.protobuf.GeneratedMessageLite.MethodToInvoke method,\n"
-      "    java.lang.Object arg0, java.lang.Object arg1) {\n"
+      "    java.lang.Object arg0) {\n"
       "  switch (method) {\n"
       "    case NEW_MUTABLE_INSTANCE: {\n"
       "      return new $classname$();\n"
