@@ -153,14 +153,6 @@ file(REMOVE ${CMAKE_CURRENT_BINARY_DIR}/cmaketest.map)
 
 find_package(Threads REQUIRED)
 
-# We can install dependencies from submodules if we're running
-# CMake v3.13 or newer.
-if(CMAKE_VERSION VERSION_LESS 3.13)
-  set(_protobuf_INSTALL_SUPPORTED_FROM_MODULE OFF)
-else()
-  set(_protobuf_INSTALL_SUPPORTED_FROM_MODULE ON)
-endif()
-
 set(_protobuf_FIND_ZLIB)
 if (protobuf_WITH_ZLIB)
   find_package(ZLIB)
@@ -288,6 +280,8 @@ include_directories(
   ${protobuf_SOURCE_DIR}
   ${protobuf_BINARY_DIR}/src
   ${protobuf_SOURCE_DIR}/src)
+
+set(protobuf_FETCH_DEPENDENCIES OFF CACHE BOOL "Fetch dependencies")
 
 set(protobuf_ABSL_PROVIDER "module" CACHE STRING "Provider of absl library")
 set_property(CACHE protobuf_ABSL_PROVIDER PROPERTY STRINGS "module" "package")
