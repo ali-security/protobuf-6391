@@ -184,8 +184,8 @@ use_java() {
       export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
       ;;
     jdk11)
-      export PATH=/usr/lib/jvm/java-11-openjdk-amd64/bin:$PATH
-      export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+      export PATH=/usr/local/openjdk-11/bin:$PATH
+      export JAVA_HOME=/usr/local/openjdk-11
       ;;
     jdk8)
       export PATH=/usr/local/openjdk-8/bin:$PATH
