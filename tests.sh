@@ -239,7 +239,6 @@ build_java() {
 # So this can't run in parallel with two different sets of tests.
 build_java_with_conformance_tests() {
   # Java build needs `protoc`.
-  internal_build_cpp
   # This local installation avoids the problem caused by a new version not yet in Maven Central
   cd java/bom && $MVN install
   cd ../..

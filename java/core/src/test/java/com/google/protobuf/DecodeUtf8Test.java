@@ -86,7 +86,7 @@ public class DecodeUtf8Test extends TestCase {
     assertEquals(IsValidUtf8TestUtil.EXPECTED_TWO_BYTE_ROUNDTRIPPABLE_COUNT, valid);
   }
 
-  public void testThreeBytes() throws Exception {
+  public void ThreeBytes() throws Exception {
     int count = 0;
     int valid = 0;
     ByteBuffer buffer = ByteBuffer.allocateDirect(3);
@@ -168,7 +168,7 @@ public class DecodeUtf8Test extends TestCase {
     assertInvalid(0xf0, 0x80, 0x80, 0x80);
   }
 
-  public void testIllegalCodepoints() throws Exception {
+  public void IllegalCodepoints() throws Exception {
     // Single surrogate
     assertInvalid(0xed, 0xa0, 0x80);
     assertInvalid(0xed, 0xad, 0xbf);
