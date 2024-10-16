@@ -188,12 +188,12 @@ use_java() {
       export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
       ;;
     jdk8)
-      export PATH=/usr/lib/jvm/java-8-openjdk-amd64/bin:$PATH
-      export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
-      ;;
-    jdk7)
       export PATH=/usr/local/openjdk-8/bin:$PATH
       export JAVA_HOME=/usr/local/openjdk-8
+      ;;
+    jdk7)
+      export PATH=/usr/lib/jvm/java-7-openjdk-amd64/bin:$PATH
+      export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
       ;;
     oracle7)
       export PATH=/usr/lib/jvm/java-7-oracle/bin:$PATH
