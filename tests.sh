@@ -180,8 +180,8 @@ use_java() {
   version=$1
   case "$version" in
     jdk17)
-      export PATH=/usr/lib/jvm/java-17-openjdk-amd64/bin:$PATH
-      export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+      export PATH=/opt/java/openjdk/bin:$PATH
+      export JAVA_HOME=/opt/java/openjdk
       ;;
     jdk11)
       export PATH=/usr/local/openjdk-11/bin:$PATH
